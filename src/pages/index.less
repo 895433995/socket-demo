@@ -1,0 +1,74 @@
+.container {
+  width: 400px;
+  margin: 0 auto;
+
+  .online {
+    line-height: 32px;
+    font-size: 16px;
+    text-align: right;
+    margin-bottom: 10px;
+
+    span {
+      color: #1991eb;
+    }
+  }
+
+  .chatBox {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .item {
+      margin-bottom: 10px;
+
+      span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        background-color: #1991eb;
+        color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        float: left;
+      }
+
+      p {
+        max-width: calc(100% - 90px);
+        margin: 0 5px;
+        padding: 0 5px;
+        line-height: 30px;
+        word-break: break-word;
+        text-align: left;
+        border-radius: 5px;
+        float: left;
+        margin-bottom: 0;
+        background-color: #b3e8b3;
+      }
+
+      &::after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+    }
+
+    .reverse {
+      span {
+        float: right;
+      }
+      p {
+        float: right;
+      }
+    }
+  }
+
+  .submit {
+    height: 30px;
+  }
+}
